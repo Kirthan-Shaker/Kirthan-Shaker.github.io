@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Independent financial and economic research by Kirthan Shaker Iyangar.">
+  <title>Kirthan Shaker Iyangar | Research</title>
+  <style>
+    :root {
+      --navy: #14283e;
+      --ink: #243448;
+      --muted: #657385;
+      --line: #dce3ea;
+      --paper: #ffffff;
+      --soft: #f5f7f9;
+      --accent: #315d82;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); }
+    a:hover { color: var(--navy); }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 84px;
+    }
+
+    .brand {
+      font-weight: 650;
+      font-size: 16px;
+      letter-spacing: -.3px;
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    nav a:hover { color: var(--navy); }
+
+    main { padding-bottom: 70px; }
+
+    .hero {
+      padding: 85px 0 70px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      margin: 15px 0 15px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 6vw, 58px);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .intro {
+      max-width: 690px;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 30px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero-links a {
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 3px;
+    }
+
+    section {
+      padding: 55px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      font-weight: 400;
+      color: var(--navy);
+      margin: 0;
+    }
+
+    .section-note {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .publication {
+      padding: 23px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .publication:first-of-type { border-top: none; }
+
+    .meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 9px;
+    }
+
+    h3 {
+      color: var(--navy);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .publication p {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 720px;
+      margin-bottom: 12px;
+    }
+
+    .read-link {
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .topic {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      padding: 22px;
+    }
+
+    .topic h3 {
+      font-size: 15px;
+      margin-bottom: 7px;
+    }
+
+    .topic p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .note {
+      background: var(--soft);
+      border-left: 3px solid var(--accent);
+      padding: 20px 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 35px 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 0 22px; }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+        gap: 12px;
+      }
+
+      nav { gap: 17px; }
+
+      .hero { padding: 60px 0 50px; }
+
+      section { padding: 42px 0; }
+
+      .topics { grid-template-columns: 1fr; }
+
+      .section-heading {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container topbar">
+      <a class="brand" href="#">Kirthan Shaker Iyangar</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#interests">Research Interests</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="hero" id="about">
+      <div class="eyebrow">Independent Research</div>
+
+      <h1>Kirthan Shaker Iyangar</h1>
+
+      <p class="subtitle">
+        Capital Markets | Financial & Economic Research
+      </p>
+
+      <p class="intro">
+        I work in mortgage capital markets, with an interest
+        in understanding how economic developments,
+        financial conditions, and market dynamics influence
+        asset prices and investment decisions.
+      </p>
+
+      <p class="intro">
+        This website is a collection of my independent
+        research, economic commentary, and quantitative
+        projects. My interests include housing and mortgage
+        markets, fixed income, macroeconomics, and
+        empirical financial research.
+      </p>
+
+      <div class="hero-links">
+        <a href="#publications">Explore Research &rarr;</a>
+        <a href="https://github.com/Kirthan-Shaker"
+           target="_blank" rel="noopener noreferrer">
+          GitHub Profile &rarr;
+        </a>
+      </div>
+    </div>
+
+    <section id="publications">
+      <div class="section-heading">
+        <h2>Research & Publications</h2>
+        <span class="section-note">Economic Commentary</span>
+      </div>
+
+      <article class="publication">
+        <div class="meta">
+          November 2026 | Housing Economics | Commentary
+        </div>
+
+        <h3>
+          Housing Starts, Building Permits, and
+          Builder Sentiment
+        </h3>
+
+        <p>
+          An examination of the divergence between housing
+          starts and building permits, alongside weakening
+          builder confidence, construction financing costs,
+          and mortgage market conditions.
+        </p>
+
+        <p>
+          Initial commentary published on LinkedIn.
+          A longer independent analysis is planned.
+        </p>
+      </article>
+
+      <!-- Add future published research articles here. -->
+
+    </section>
+
+    <section id="interests">
+      <div class="section-heading">
+        <h2>Research Interests</h2>
+      </div>
+
+      <div class="topics">
+        <div class="topic">
+          <h3>Housing & Mortgage Markets</h3>
+          <p>
+            Housing activity, mortgage rates, affordability,
+            origination dynamics, and prepayment behavior.
+          </p>
+        </div>
+
+        <div class="topic">
+          <h3>Fixed Income & Interest Rates</h3>
+          <p>
+            Treasury yields, term structure dynamics,
+            mortgage spreads, and monetary policy.
+          </p>
+        </div>
+
+        <div class="topic">
+          <h3>Macroeconomic Analysis</h3>
+          <p>
+            Economic indicators, labor markets, inflation,
+            and their implications for financial markets.
+          </p>
+        </div>
+
+        <div class="topic">
+          <h3>Quantitative Finance</h3>
+          <p>
+            Empirical asset pricing, equity quality factors,
+            financial datasets, and statistical analysis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-heading">
+        <h2>Selected Projects</h2>
+      </div>
+
+      <div class="note">
+        This section will feature selected empirical and
+        quantitative research projects as they are completed.
+        Supporting code, methodology, and results will be
+        included where appropriate.
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>&copy; <span id="year">2026</span>
+        Kirthan Shaker Iyangar
+      </span>
+      <span>
+        Independent research and personal views only.
+        Not investment advice.
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
